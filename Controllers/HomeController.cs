@@ -36,7 +36,7 @@ namespace Mobit.Controllers
                 {
                     var senderEmail = new MailAddress("deneme987654123@gmail.com", "URL");
                     var receivereEmail = new MailAddress(receiverEmail, "Receiver");
-                    var password = "deneme987654";
+                    var password = "şifre";
                     var body = message;
                     var smtp = new SmtpClient
                     {
