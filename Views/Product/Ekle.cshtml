@@ -1,0 +1,54 @@
+﻿@model Mobit.Models.Products
+@{
+    ViewBag.Title = "Ekle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@*<form action="Ekle" method="post" enctype="multipart/form-data">*@
+@using (Html.BeginForm("Ekle", "Product", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div class="col-md-6 col-xs-12">
+        <div class="x_panel">
+            @*<div class="x_title">
+                    <h1>Ürün Ekleme işlemleri</h1>
+                </div>*@
+            <div class="x_content">
+                <br />
+
+                <div class="control-group">
+                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Ürün Adı :</label>
+                    <div class="col-md-9 col-sm-9 col-xs-12">
+                        <input type="text" id="txtName" name="ProductName" value="" class="form-control" />
+                        <div id="suggestions-container1" style="position: relative; float: left; width: 250px; margin: 10px;"></div>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Ürün Açıklaması :</label>
+                    <div class="col-md-9 col-sm-9 col-xs-12">
+                        <textarea name="Description" class="form-control"></textarea>
+                        <div id="suggestions-container1" style="position: relative; float: left; width: 250px; margin: 10px;"></div>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Fotoğraf</label>
+                    <div class="col-md-9 col-sm-9 col-xs-12">
+                        <input type="file" name="ImageFile" />
+                        <div id="suggestions-container1" style="position: relative; float: left; width: 250px; margin: 10px;"></div>
+                    </div>
+                </div>
+
+                <div class="control-group">
+
+                    <div class="col-md-9 col-sm-9 col-xs-12">
+                        <input type="submit" name="Ekle" value="Ekle" class="btn btn-success"  />
+                        <div id="suggestions-container1" style="position: relative; float: left; width: 250px; margin: 10px;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+@*</form>*@
